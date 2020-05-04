@@ -1,6 +1,6 @@
 SPINAL-Scalable PPI Network Alignment, by C. Erten.
 
-SPINAL has been tested on Unix systems. It has been coded in C++ and compiled via GNU compiler, g++4.1. We provide several useful Python scripts as well. You may need the ìNetworkXî package for some of the Python scripts. Details of this package can be found at: http://networkx.lanl.gov/
+SPINAL has been tested on Unix systems. It has been coded in C++ and compiled via GNU compiler, g++4.1. We provide several useful Python scripts as well. You may need the ‚ÄúNetworkX‚Äù package for some of the Python scripts. Details of this package can be found at: http://networkx.lanl.gov/
 
 We note that checking the format of the files in the data folder after reading the execution instructions below might be quite helpful.
 
@@ -10,19 +10,19 @@ USAGE:
 
   ./spinal -ver -ns X.gml Y.gml seq_file out_file alpha
 
-  where -ver is either ì-Iî (if only running Algorithm1) or ì-IIî (if running   
+  where -ver is either ‚Äú-I‚Äù (if only running Algorithm1) or ‚Äú-II‚Äù (if running   
   both Algorithm1 and 2), X.gml is the ppi network of organism1, Y.gml is that 
   of organism2, seq_file is the normalized sequence similarity scores, out_file 
   is the output file where the alignment results are written. 
 
   NOTE1: X.gml, Y.gml must be in .gml format. In this format, each node of X.gml 
-  must have integer indices starting with 0, and ìlabelsî corresponding to  
+  must have integer indices starting with 0, and ‚Äúlabels‚Äù corresponding to  
   protein names. File seq_file is assumed to be consisting of lines 
-  ìx1 y1   scoreî where x1 is the ìindexî of a protein in X.gml and x2 is the 
-  ìindexî of a protein in Y.gml, score is a normalized sequence similarity score 
+  ‚Äúx1 y1   score‚Äù where x1 is the ‚Äúindex‚Äù of a protein in X.gml and x2 is the 
+  ‚Äúindex‚Äù of a protein in Y.gml, score is a normalized sequence similarity score 
   between 0 and 1. To help for construction of X.gml, Y.gml, seq_file in the 
   desired format we provide a python script, data_generation.py. If you already 
-  have a ppi file as a text file in ìexactlyî the following format:
+  have a ppi file as a text file in ‚Äúexactly‚Äù the following format:
 	INTERACTOR_A  INTERACTOR_B
 	x1 x2
 	x1 x5
@@ -39,7 +39,7 @@ USAGE:
   sequence similarity file. This generates X.gml, Y.gml, and S.pin which are  
   files in the desired format. You can then use these as input to SPINAL.
 
-  NOTE2: The output of SPINAL, ìout_fileî provides alignments, but with indices 
+  NOTE2: The output of SPINAL, ‚Äúout_file‚Äù provides alignments, but with indices 
   in the corresponding .gml files. If you want to convert back to original names 
   in X.txt and Y.txt, you may use the spinal_original_names.py as follows:
   .pyscripts/spinal_original_names.py X.gml Y.gml out_file out_file_original  
